@@ -1,0 +1,46 @@
+# Virtual Environment
+venv/
+env/
+.venv/
+__pypackages__/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE configuration
+.idea/
+.vscode/
+
+# Flask specific
+instance/
+.webassets-cache
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.so
+
+# Database files
+*.db
+*.sqlite3
+
+# Secrets
+.env
+*.env
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# Linters
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
