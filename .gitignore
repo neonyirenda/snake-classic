@@ -1,46 +1,84 @@
-# Virtual Environment
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
 venv/
 env/
-.venv/
-__pypackages__/
-
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# IDE configuration
-.idea/
-.vscode/
-
-# Flask specific
-instance/
-.webassets-cache
-
-# Build artifacts
-build/
-dist/
-*.egg-info/
-*.so
-
-# Database files
-*.db
-*.sqlite3
-
-# Secrets
-.env
-*.env
+ENV/
+env.bak/
+venv.bak/
 
 # Testing
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+.nox/
+coverage/
+*.cover
+.hypothesis/
+.cache
 nosetests.xml
 coverage.xml
+*.cover
+.coverage.*
 
-# Linters
-.mypy_cache/
-.dmypy.json
-dmypy.json
-.ruff_cache/
+# JavaScript/Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

@@ -14,36 +14,38 @@ Play the game here: [https://neonyirenda.pythonanywhere.com/](https://neonyirend
 *   **Pause and Resume:** Press the "Escape" key to pause the game and resume when you're ready.
 *   **Clean, Modern UI:** A visually appealing and responsive user interface.
 
-## Future Plans
+## Development
 
-- [x] **Design:** Make the frame look like a brick 🧱 wall with alternating colors.
-    - [x] **Favicon** Add a favicon
-- [x] **Gameplay:**
-    - [x] Separate level from score.
-    - [x] Display level in the top-right corner.
-    - [x] Increase speed every 3 levels.
-    - [x] Snake starts in a random direction.
-    - [x] Add mobile controls 
-    - [ ] Add a winning condtion.
-- [x] **Fruit Variety:**
-    - [x] Add different fruits with unique effects:
-        - 🍎 **Apple (Red):** Standard fruit, snake grows by 1.
-        - ⚫ **Rotten Apple (Black):** Reduces snake length by 2 and score by 2.
-        - 🌸 **Special Apple (Pink):** Snake grows by 4, appears rarely.
-    - [x] Implement multiple fruit drops (e.g., two at a time).
-    - [x] Allow players to choose between two different fruits at higher levels (e.g., starting at level 5).
-- [ ] **Sound Effects:** Add sound effects for eating food, game over, and other events.
-- [ ] **Visual Effects:** Implement visual effects like screen shake or particle effects to enhance the player experience.
-- [x] **Snake Assets:** Add custom graphics or sprites for the snake.
-    - [ ] **Body Code** work body code when snake is turning currently hacky, would take a minute but ZESCO
-- [x] **Fruit Assets:** Add fruit assets for the fruit, super fruit and bomb.
-- [x] **Code Refactoring:**
-    - [x] Centralize asset loading in `assets.js`.
-    - [x] Rename `api.js` to `highscoreService.js` for better clarity.
-- [x] **Speed Scaling:** Adjust speed to scale up faster for a more challenging experience.
-- [ ] **Snake Color Options:** Allow players to choose their snake color before starting the game.
-- [ ] **Changing Map:** Implement maps that change layout or obstacles as the game progresses.
-- [ ] **Frame Scaling** Have frame scale depending on screen size.
+This project follows **Test-Driven Development (TDD)** principles. For detailed future plans and roadmap, see [TODO.md](TODO.md).
+
+### Testing
+- **Backend Tests:** Python tests using pytest
+- **Frontend Tests:** JavaScript tests using Jest
+- **Test Coverage:** Targeting 80%+ code coverage
+
+#### Running Tests
+
+**Easy way (all tests):**
+```bash
+# Linux/macOS
+./test_runner.sh
+
+# Windows
+test_runner.bat
+```
+
+**Manual way:**
+```bash
+# Backend tests only
+python -m pytest tests/test_app.py -v
+
+# Frontend tests only (requires Node.js)
+npm test
+
+# With coverage
+python -m pytest tests/test_app.py --cov=app --cov-report=html
+npm test -- --coverage
+```
 
 ## How to Run
 

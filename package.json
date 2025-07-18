@@ -1,0 +1,41 @@
+{
+  "name": "snake-classic",
+  "version": "1.0.0",
+  "description": "A classic snake game with Flask backend and JavaScript frontend",
+  "main": "app.py",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "static/js/**/*.js",
+      "!static/js/assets.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "html",
+      "text",
+      "lcov"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "@testing-library/jest-dom": "^6.1.4"
+  },
+  "keywords": [
+    "snake",
+    "game",
+    "javascript",
+    "flask",
+    "python"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -25,3 +25,12 @@ async function displayHighscores() {
         });
     }
 }
+
+// Export functions for testing (only in Node.js environment)
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        showMenu,
+        showGame,
+        displayHighscores
+    };
+}
