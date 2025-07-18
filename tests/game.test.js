@@ -73,6 +73,7 @@ global.document.getElementById = jest.fn((id) => mockElements[id]);
 // Mock functions that are called in event listeners
 global.showMenu = jest.fn();
 global.displayHighscores = jest.fn();
+global.initializeFrameScaling = jest.fn();
 
 // Import the game functions after mocking
 // Since the game.js file uses global state, we need to reset it between tests

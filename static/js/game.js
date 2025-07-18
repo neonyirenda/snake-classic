@@ -290,6 +290,10 @@ document.getElementById("rightButton").addEventListener("click", () => {
 });
 
 // Initial setup
+// Initialize frame scaling first
+initializeFrameScaling();
+
+// Then show the menu
 showMenu();
 
 // Export functions for testing (only in Node.js environment)

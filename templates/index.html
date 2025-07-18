@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake</title>
-    <link rel="icon" type="image/x-icon"
-        href="{{ url_for('static', filename='favicon/icons8-snake-pulsar-color-96.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon/icons8-snake-pulsar-color-96.ico') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="game-container">
-        <h1>Snake by neo</h1>
-        <div id="menu">
-            <button id="startButton">Start</button>
-            <button id="highscoresButton">High Scores</button>
+      <h1>Snake by neo</h1>
+      <div id="menu">
+        <button id="startButton">Start</button>
+        <button id="highscoresButton">High Scores</button>
+      </div>
+      <canvas id="gameCanvas" style="display: none"></canvas>
+      <div id="pause-menu" class="overlay" style="display: none">
+        <div class="overlay-content">
+          <h2>Paused</h2>
+          <button id="resumeButton">Resume</button>
+          <button id="restartButton">Restart</button>
+          <button id="quitButton">Quit</button>
         </div>
-        <canvas id="gameCanvas" width="400" height="400" style="display: none;"></canvas>
-        <div id="pause-menu" class="overlay" style="display: none;">
-            <div class="overlay-content">
-                <h2>Paused</h2>
-                <button id="resumeButton">Resume</button>
-                <button id="restartButton">Restart</button>
-                <button id="quitButton">Quit</button>
-            </div>
-        </div>
-        <div id="highscores" style="display: none;">
-            <h2>High Scores</h2>
-            <ul id="highscoresList"></ul>
-            <button id="backButton">Back</button>
-        </div>
-        <div id="mobile-controls" class="controls-grid">
-            <button id="upButton" class="control-button">▲</button>
-            <button id="leftButton" class="control-button">◀</button>
-            <button id="downButton" class="control-button">▼</button>
-            <button id="rightButton" class="control-button">▶</button>
-        </div>
+      </div>
+      <div id="highscores" style="display: none">
+        <h2>High Scores</h2>
+        <ul id="highscoresList"></ul>
+        <button id="backButton">Back</button>
+      </div>
+      <div id="mobile-controls" class="controls-grid">
+        <button id="upButton" class="control-button">▲</button>
+        <button id="leftButton" class="control-button">◀</button>
+        <button id="downButton" class="control-button">▼</button>
+        <button id="rightButton" class="control-button">▶</button>
+      </div>
     </div>
     <script src="{{ url_for('static', filename='js/constants.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/frameScaling.js') }}"></script>
     <script src="{{ url_for('static', filename='js/assets.js') }}"></script>
     <script src="{{ url_for('static', filename='js/highscoreService.js') }}"></script>
     <script src="{{ url_for('static', filename='js/draw.js') }}"></script>
     <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
     <script src="{{ url_for('static', filename='js/game.js') }}"></script>
-</body>
-
+  </body>
 </html>
